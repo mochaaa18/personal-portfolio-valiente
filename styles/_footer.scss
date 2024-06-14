@@ -1,0 +1,35 @@
+.footer {
+  background-color: $footer-background;
+  padding-bottom: 1rem;
+  padding-top: 3rem;
+  color: $accent-color;
+
+  .footer-content {
+    h2 {
+      font-weight: 700;
+      color: $primary-color;
+    }
+    .qoutes {
+      color: $secondary-color;
+      font-style: italic;
+    }
+
+    .social-media {
+      a {
+        text-decoration: none;
+
+        i {
+          color: $accent-color;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      color: $secondary-color;
+    }
+  }
+}

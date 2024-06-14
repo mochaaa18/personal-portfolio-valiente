@@ -1,0 +1,84 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-color: $background-color;
+
+  .container {
+    height: 100%;
+    width: 100%;
+
+    .row {
+      height: 100%;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      border-radius: 50px;
+      filter: drop-shadow($secondary-color 6px 6px 10px);
+    }
+
+    .full-name {
+      color: #f2f3f5;
+      text-transform: capitalize;
+
+      span {
+        color: $primary-color;
+      }
+    }
+
+    .profession {
+      font-weight: 700;
+      color: $secondary-color;
+
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    .social-media {
+      i {
+        color: #f2f3f5;
+
+        &:hover {
+          color: $primary-color;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    padding-top: 5em;
+    height: auto;
+    .hero-image {
+      height: 500px;
+      object-fit: cover;
+      object-position: 50% 0;
+      margin-bottom: 2em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    .hero-image {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    .hero-image {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+    }
+  }
+}

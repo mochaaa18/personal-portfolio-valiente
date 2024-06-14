@@ -1,0 +1,62 @@
+.contacts {
+  h2 {
+    color: $primary-color;
+    font-weight: 600;
+  }
+  .contact-info {
+    i {
+      color: $primary-color;
+    }
+
+    p {
+      line-height: 0.8;
+
+      &:nth-child(1) {
+        color: $secondary-color;
+      }
+      &:nth-child(2) {
+        font-weight: 600;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .social-media {
+    i {
+      color: $secondary-color;
+
+      &:hover {
+        color: $primary-color;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .form-control {
+    padding: 1em;
+  }
+
+  .send-button {
+    background: linear-gradient(to left, $primary-color, $primary-color) right;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    transition: ease 0.3s;
+    border: $border-button;
+    padding: 0;
+    padding-left: 1.2em;
+    border-radius: 10px 30px 30px 10px;
+    color: $accent-color;
+
+    i {
+      background-color: $primary-color;
+      margin-left: 1.2em;
+      color: $accent-color;
+      border-radius: 50%;
+      padding: 15px 15px;
+    }
+
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+}

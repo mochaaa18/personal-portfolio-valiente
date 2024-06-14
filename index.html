@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Saira+Extra+Condensed:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- === NAVBAR WEB === -->
+    <nav id="navbar" class="navbar nav-menu nav-menu-web d-none d-lg-flex position-fixed" style="height: 100vh;" data-aos="fade-up" data-aos-duration="1500">
+        <ul>
+            <li class="nav-item"><a href="#home" class="home nav-links active"><i class='bx bxs-home'></i><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about" class="about nav-links"><i class='bx bxs-user'></i><span>About</span></a></li>
+            <li class="nav-item"><a href="#education" class="education nav-links"><i
+                        class='bx bxs-trophy'></i><span>Education</span></a>
+            </li>
+            <li class="nav-item"><a href="#skills" class="skills nav-links"><i class='bx bx-code-alt'></i><span>Skills</span></a>
+            </li>
+            <li class="nav-item"><a href="#projects" class="projects nav-links"><i
+                        class='bx bxs-book-content'></i><span>Projects</span></a></li>
+            <li class="nav-item"><a href="#contacts" class="contacts nav-links"><i class='bx bxs-envelope'></i><span>Contact</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- === NAVBAR MOBILE === -->
+    <nav id="navbar2" class="navbar navbar-expand-lg nav-menu-mobile d-lg-none d-block fixed-top" data-aos="fade-down" data-aos-duration="1000">
+        <a class="offcanvas-button-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+            aria-controls="offcanvasExample">
+            <i class='bx bx-menu'></i>
+        </a>
+        
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h3>Menu</h3>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav me-auto mb-lg-0">
+                    <li class="nav-item">
+                        <a href="#home" class="home nav-link d-flex align-items-center">
+                            <i class='bx bx-home'></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="about nav-link d-flex align-items-center">
+                            <i class='bx bx-user'></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#education" class="education nav-link d-flex align-items-center">
+                            <i class='bx bx-trophy'></i>
+                            <span>Education</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="skills nav-link d-flex align-items-center">
+                            <i class='bx bx-code-alt'></i>
+                            <span>Education</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="projects nav-link d-flex align-items-center">
+                            <i class='bx bx-book-content'></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacts" class="contacts nav-link d-flex align-items-center">
+                            <i class='bx bx-envelope'></i>
+                            <span>Contact me</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- === HERO START === -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row d-lg-flex flex-row-reverse align-items-center justify-content-center">
+                <div class="col-lg-5 d-flex justify-content-center justify-content-center" data-aos="fade-left" data-aos-duration="1000">
+                    <img class="hero-image" src="assets/lookaway.JPG" alt="Hero Image">
+                </div>
+                <div class="col-lg-6 offset-lg-1" data-aos="zoom-out-right">
+                    <h1 class="full-name fw-bold lh-1 mb-3">I'm <span>Ron Michael Valiente</span></h1>
+                    <h1 class="profession fw-bold lh-1 mb-3"><span id="profession"></span></h1>
+                    <p class="lead opacity-50 text-white">A Philippine based Web developer that is dedicated to building user-focused websites for customers with various business objectives.</p>
+                    <ul class="list-inline social-media">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/ronskiii27" target="_blank"><i class='bx bxl-facebook-circle bx-md'></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/ron.valiente/" target="_blank"><i class='bx bxl-instagram-alt bx-md'></i></a></li>
+                        <li class="list-inline-item"><a href="https://github.com/mochaaa18" target="_blank"><i class='bx bxl-github bx-md'></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/ron-michael-valiente-2163391bb/" target="_blank"><i class='bx bxl-linkedin-square bx-md'></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === ABOUT START === -->
+    <section id="about" class="about-me container-style">
+        <div class="container-title" data-aos="fade-up">
+            <h1 class="container-title-back">Information</h1>
+            <h1 class="container-title-front">About <span>me</span></h1>
+
+        </div>
+        <div class="container">
+            <div class="row d-flex gap-5">
+                <div class="col d-flex justify-content-center" data-aos="fade-right" data-aos-duration="1000">
+                    <img class="about-profile" src="assets/gradpic.JPG" alt="qweqwe">
+                </div>
+                <div class="col" data-aos="fade-left">
+                    <h2 class="about-title">PERSONAL INFORMATION</h2>
+                    <div class="row">
+                        <p class="about-info col-md-6">Firstname: <span>Ron Michael</span></p>
+                        <p class="about-info col-md-6">Lastname: <span>Valiente</span></p>
+                    </div>
+                    <div class="row">
+                        <p class="about-info col-md-6">Age: <span>28y/o</span></p>
+                        <p class="about-info col-md-6">Nationality: <span>Filipino</span></p>
+                    </div>
+                    <div class="row">
+                        <p class="about-info col-md-6">Address: <span>Taytay Rizal</span></p>
+                        <p class="about-info col-md-6">Lang: <span>English/Tagalog</span></p>
+                    </div>
+                    <div class="row">
+                        <p class="about-info col-md-12">Phone: <span>+63-919-233-9479</span></p>
+                    </div>
+                    <div class="row">
+                        <p class="about-info col-md-12">Email: <span>ron.michael.valiente@gmail.com</span></p>
+                    </div>
+                    <a class="download-button mt-3" href="assets/Ron-Michael-Valiente-Resume.pdf" download><span>Download CV</span><i class='bx bxs-download'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === EDUCATION START === -->
+    <section id="education" class="education container-style">
+        <div class="container-title" data-aos="fade-up">
+            <h1 class="container-title-back">Experience</h1>
+            <h1 class="container-title-front">Educa<span>tion</span></h1>
+        </div>
+        
+        <div class="container d-flex justify-content-center gap-5">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <h2 class="content-title" data-aos="fade-right">EDUCATION</h2>
+                    <div class="content-body">
+                        <div class="content-box" data-aos="fade-right">
+                            <i class='icon bx bxs-book-open'></i>
+                            <p class="box-year">2020 - 2021</p>
+                            <h5>Zuitt Coding Bootcamp</h5>
+                            <h5 class="box-title"><span>- </span>MERN Full Stack Development</h5>
+                            <p class="box-text">A globally recognized startup, is at the cutting-edge of IT education, offering a comprehensive online web
+                            development coding bootcamp locally and across the globe.</p>
+                        </div>
+                        <div class="content-box" data-aos="fade-right">
+                            <i class='icon bx bxs-book-open'></i>
+                            <p class="box-year">2012 - 2018</p>
+                            <h5>Technological Institute of the Philippines</h5>
+                            <h5 class="box-title"><span>- </span>BS Information Technology</h5>
+                            <p class="box-text">One of the premier engineering schools in the country,
+                            distinguished not only for its excellence in engineering but also for its diverse undergraduate programs in
+                            architecture, computer studies, business, education, and the arts.</p>
+                        </div>
+                        <div class="content-box" data-aos="fade-right">
+                            <i class='icon bx bxs-book-open'></i>
+                            <p class="box-year">2008 - 2012</p>
+                            <h5>Francisco P. Felix Memorial National Highschool</h5>
+                            <h5 class="box-title"><span>- </span>High school</h5>
+                            <p class="box-text">A high school in the municipality of Cainta in The
+                            Philippines and is considered the "Division Leader School In Rizal.". Extension programs had been done to accommodate the
+                            ballooning student population.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mt-md-5 mt-lg-0">
+                    <h2 class="content-title" data-aos="fade-left">EXPERIENCE</h2>
+                    <div class="content-body">
+                        <div class="content-box" data-aos="fade-left">
+                            <i class='bx bxs-briefcase'></i>
+                            <p class="box-year">2022-2023</p>
+                            <p class="box-year">8 months</p>
+                            <h5>Atos PH</h5>
+                            <h5 class="box-title"><span>- </span>Associate Software Engineer</h5>
+                            <p class="box-text">A French multinational information technology service and consulting company. It specialises in hi-tech transactional services, unified communications, cloud, big data and cybersecurity services.</p>
+                        </div>
+                        <div class="content-box" data-aos="fade-left">
+                            <i class='bx bxs-briefcase'></i>
+                            <p class="box-year">2018</p>
+                            <p class="box-year">3 months</p>
+                            <h5>Startek</h5>
+                            <h5 class="box-title"><span>- </span>Intern IT Specialist</h5>
+                            <p class="box-text">A customer engagement BPO company. They aim to deliver meaningful relationships through superb customer
+                            service insights for their clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === SKILLS START === -->
+    <section id="skills" class="skills container-style">
+        <div class="container-title" data-aos="fade-up">
+            <h1 class="container-title-back">Techstack</h1>
+            <h1 class="container-title-front">Ski<span>lls</span></h1>
+        </div>
+        <div class="container cont">
+            <div class="row">
+                <div class="col-lg-6 progress-container mb-3" data-aos="fade-right">
+                    <div class="row mb-2">
+                        <div class="col-6"><span>HTML5</span></div>
+                        <div class="col-6 d-flex justify-content-end">78%</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-html" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 progress-container mb-3" data-aos="fade-left">
+                    <div class="row mb-2">
+                        <div class="col-6"><span>CSS3</span></div>
+                        <div class="col-6 d-flex justify-content-end">75%</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-css" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 progress-container mb-3" data-aos="fade-right">
+                    <div class="row mb-2">
+                        <div class="col-6"><span>SASS CSS</span></div>
+                        <div class="col-6 d-flex justify-content-end">68%</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-sass" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 progress-container mb-3" data-aos="fade-left">
+                    <div class="row mb-2">
+                        <div class="col-6"><span>Bootstrap 5.0</span></div>
+                        <div class="col-6 d-flex justify-content-end">77%</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bootstrap" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 progress-container mb-3" data-aos="fade-right">
+                    <div class="row mb-2">
+                        <div class="col-6"><span>Javascript</span></div>
+                        <div class="col-6 d-flex justify-content-end">55%</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-javascript" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 progress-container mb-3" data-aos="fade-left">
+                    <div class="row mb-2">
+                        <div class="col-6"><span>ReactJS Framework</span></div>
+                        <div class="col-6 d-flex justify-content-end">68%</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-react" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 progress-container mb-3" data-aos="fade-right">
+                    <div class="row mb-2">
+                        <div class="col-6"><span>Tailwind CSS</span></div>
+                        <div class="col-6 d-flex justify-content-end">56%</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-tailwind" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 progress-container mb-3" data-aos="fade-left">
+                    <div class="row mb-2">
+                        <div class="col-6"><span>NodeJS</span></div>
+                        <div class="col-6 d-flex justify-content-end">50%</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-node" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 progress-container mb-3" data-aos="fade-right">
+                    <div class="row mb-2">
+                        <div class="col-6"><span>ExpressJS</span></div>
+                        <div class="col-6 d-flex justify-content-end">50%</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-express" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 progress-container mb-3" data-aos="fade-left">
+                    <div class="row mb-2">
+                        <div class="col-6"><span>MongoDB</span></div>
+                        <div class="col-6 d-flex justify-content-end">45%</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-mongo" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 progress-container mb-3" data-aos="fade-right">
+                    <div class="row mb-2">
+                        <div class="col-6"><span>PostgreSQL</span></div>
+                        <div class="col-6 d-flex justify-content-end">55%</div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-postgre" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                            aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container icon-container" data-aos="fade-up" data-aos-duration="1000">
+            <div class="row icon-items">
+                <i class='icon icon-html bx bxl-html5' data-bs-toggle="tooltip" data-bs-placement="bottom" title="HTML5"></i>
+                <i class='icon icon-css bx bxl-css3' data-bs-toggle="tooltip" data-bs-placement="bottom" title="CSS3"></i>
+                <i class='icon icon-sass bx bxl-sass' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sass"></i>
+                <i class='icon icon-boot bx bxl-bootstrap' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Bootstrap 5.0"></i>
+                <i class='icon icon-js bx bxl-javascript' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Javascript"></i>
+                <i class='icon icon-react bx bxl-react' data-bs-toggle="tooltip" data-bs-placement="bottom" title="ReactJS"></i>
+                <i class='icon icon-tailwind bx bxl-tailwind-css' data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tailwind"></i>
+                <i class='icon icon-node bx bxl-nodejs' data-bs-toggle="tooltip" data-bs-placement="bottom" title="NodeJS"></i>
+                <i class='icon icon-mongo bx bxl-mongodb' data-bs-toggle="tooltip" data-bs-placement="bottom" title="MongoDB"></i>
+                <i class='icon icon-postgre bx bxl-postgresql' data-bs-toggle="tooltip" data-bs-placement="bottom" title="PostgreSQL"></i>
+            </div>
+        </div>
+    </section>
+    
+    <!-- === PROJECTS START === -->
+    <section id="projects" class="projects container-style">
+        <div class="container-title" data-aos="fade-up">
+            <h1 class="container-title-back">My work</h1>
+            <h1 class="container-title-front">Pro<span>jects</span></h1>
+        </div>
+        <div class="content d-flex justify-content-center">
+            <div class="content-body">
+                <div class="project-box" data-aos="fade-up" data-aos-duration="500">
+                    <figure class="project-content">
+                        <img src="./assets/project-1.jpg" alt="sample" />
+                        <figcaption>
+                            <h3>Personal Web Portfolio</h3>
+                            <div class="project-actions">
+                                <a class="action" href="#">Preview</a>
+                                <a class="action" href="#">Github</a>
+                            </div>
+                            <div class="tech-used">
+                                <h4>HTML</h4>
+                                <h4>SCSS</h4>
+                                <h4>Javascript</h4>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="project-box" data-aos="fade-up" data-aos-duration="1000">
+                    <figure class="project-content">
+                        <img src="./assets/project-2.jpg" alt="sample" />
+                        <figcaption>
+                            <h3>E-Commerce</h3>
+                            <div class="project-actions">
+                                <a class="action" href="#">Preview</a>
+                                <a class="action" href="#">Github</a>
+                            </div>
+                            <div class="tech-used">
+                                <h4>React</h4>
+                                <h4>Tailwind</h4>
+                                <h4>NodeJS</h4>
+                                <h4>PostgreSQL</h4>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="project-box" data-aos="fade-up" data-aos-duration="1500">
+                    <figure class="project-content">
+                        <img src="./assets/project-3.jpg" alt="sample" />
+                        <figcaption>
+                            <h3>Under construction...</h3>
+                            <div class="project-actions">
+                                <a class="action" href="#" aria-disabled="false">Preview</a>
+                                <a class="action" href="#">Github</a>
+                            </div>
+                            <div class="tech-used">
+                                <h4>N/A</h4>
+                                <h4>N/A</h4>
+                                <h4>N/A</h4>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- === CONTACT ME START === -->
+    <section id="contacts" class="contacts container-style">
+        <div class="container-title" data-aos="fade-up">
+            <h1 class="container-title-back">Message me</h1>
+            <h1 class="container-title-front">Cont<span>act</span></h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <h2>Let's connect!</h2>
+                    <p class="mb-5">Don't be shy and feel free to get in touch with me. Let me hear your thoughts. I'm open on discussing creative ideas and opportunities. </p>
+                    <div class="row contact-info mb-4">
+                        <div class="col-2 d-flex align-items-center"><i class='bx bxs-map-pin bx-md'></i></div>
+                        <div class="col-10">
+                            <p>Address:</p>
+                            <p>Taytay Rizal</p>
+                        </div>
+                    </div>
+                    <div class="row contact-info mb-4">
+                        <div class="col-2 d-flex align-items-center"><i class='bx bxs-phone bx-md'></i></div>
+                        <div class="col-10">
+                            <p>Phone Number:</p>
+                            <p>+63-919-233-9479</p>
+                        </div>
+                    </div>
+                    <div class="row contact-info mb-4">
+                        <div class="col-2 d-flex align-items-center"><i class='bx bxl-gmail bx-md'></i></div>
+                        <div class="col-10">
+                            <p>Gmail:</p>
+                            <p>ron.michael.valiente@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <form action="https://submit-form.com/iryucFjVq" data-botpoison-public-key="pk_9d78b425-c559-45e2-9baf-1801c5255e73">
+                        <input type="hidden" name="_redirect" value="http://127.0.0.1:5500/components/thankyou.html" />
+                        <div class="row mb-3">
+                            <div class="col-lg-6"><input type="text" name="Name" class="form-control mb-3 mb-lg-0" id="fullName" placeholder="Your name" required></div>
+                            <div class="col-lg-6"><input type="email" name="Email" class="form-control" id="email" placeholder="Your email" required></div>
+                        </div>
+                        <input type="text" name="Subject" class="form-control mb-3" id="emailSubject" placeholder="Your Subject" required>
+                        <textarea class="form-control" id="emailBody" name="Message" rows="5" placeholder="You message" required></textarea>
+                        <button class="send-button mt-3" type="submit"><span>Send Message</span><i class='bx bxs-paper-plane'></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- === FOOTER START === -->
+    <footer class="footer">
+        <div class="container d-flex justify-content-center">
+            <div class="footer-content text-center">
+                <h2>RON MICHAEL VALIENTE</h2>
+                <p class="qoutes">"Programming is learned by writing programs. ― Brian Kernighan"</p>
+                <ul class="list-inline social-media">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/ronskiii27" target="_blank"><i
+                                class='bx bxl-facebook-circle bx-md'></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/ron.valiente/" target="_blank"><i
+                                class='bx bxl-instagram-alt bx-md'></i></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/mochaaa18" target="_blank"><i
+                                class='bx bxl-github bx-md'></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/ron-michael-valiente-2163391bb/"
+                            target="_blank"><i class='bx bxl-linkedin-square bx-md'></i></a></li>
+                </ul>
+                <p class="copyright">© Copyright Ron Valiente Portfolio. All Rights Reserved.</p>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="./js/main.js"></script>
+
+    <!-- SMTPJS CDN -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- Typed JS CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- SWAL CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- AOS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+
+        var typed = new Typed("#profession", {
+                strings: ["- WEB DEVELOPER", "- FRONTEND DEVELOPER", "- REACT DEVELOPER"],
+                typeSpeed: 70,
+                backSpeed: 70,
+                smartBackspace: true,
+                shuffle: false,
+                backDelay: 1500,
+                loop: true,
+                loopCount: Infinity,
+            });
+    </script>
+
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

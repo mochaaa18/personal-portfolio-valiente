@@ -1,0 +1,221 @@
+.projects {
+  .content {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+
+    .content-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1em;
+      transition: 0.5s;
+
+      .project-box {
+        height: 380px;
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+
+        .project-content {
+          position: relative;
+          display: inline-block;
+          overflow: hidden;
+          width: 100%;
+          height: 100%;
+          color: $accent-color;
+          text-align: left;
+          font-size: 16px;
+          background: #000;
+
+          *,
+          &:before,
+          &:after {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+          }
+
+          img {
+            max-width: 100%;
+            backface-visibility: hidden;
+            vertical-align: top;
+            height: 380px;
+            transition: transform 0.5s;
+            border-radius: 15px;
+          }
+
+          &:before,
+          &:after {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            content: "";
+            background-color: $accent-color;
+            z-index: 1;
+            opacity: 0;
+          }
+
+          &:before {
+            width: 0;
+            height: 5px;
+            background-color: $accent-color;
+          }
+
+          &:after {
+            height: 0;
+            width: 5px;
+            background-color: $accent-color;
+          }
+
+          figcaption {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 10px 20px;
+            width: 100%;
+          }
+
+          h3 {
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: 700;
+            opacity: 0;
+            margin-bottom: 10px;
+          }
+
+          .tech-used {
+            display: flex;
+            gap: 0.3em;
+
+            h4 {
+              margin: 0;
+              font-size: 0.8em;
+              font-weight: normal;
+              padding: 0.5em;
+              background-color: $grey-text-color;
+              color: $grey-color;
+              border-radius: 10px;
+              margin-bottom: 10px;
+              opacity: 0;
+            }
+          }
+
+          .project-actions {
+            display: flex;
+            gap: 0.3em;
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+            opacity: 0;
+            border-bottom: 3px solid $primary-color;
+
+            .action {
+              padding: 0.5em 1em;
+              font-size: 0.8em;
+              border: 1px solid $primary-color;
+              color: $grey-color;
+              text-decoration: none;
+              border-radius: 10px;
+              opacity: 0;
+
+              &:hover {
+                background-color: $primary-color;
+              }
+            }
+          }
+
+          &:hover img,
+          &.hover img {
+            zoom: 1;
+            filter: alpha(opacity=20);
+            -webkit-opacity: 0.2;
+            opacity: 0.2;
+            transform: scale(1.3);
+          }
+
+          &:hover:before,
+          &.hover:before,
+          &:hover:after,
+          &.hover:after {
+            opacity: 1;
+            -webkit-transition-delay: 0.25s;
+            transition-delay: 0.25s;
+          }
+
+          &:hover:before,
+          &.hover:before {
+            width: 40px;
+          }
+
+          &:hover:after,
+          &.hover:after {
+            height: 40px;
+          }
+
+          &:hover h3,
+          &.hover h3,
+          &:hover h4,
+          &.hover h4,
+          &:hover .action,
+          &.hover .action,
+          &:hover .project-actions,
+          &.hover .project-actions {
+            opacity: 1;
+          }
+
+          &:hover h3,
+          &.hover h3 {
+            -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+          }
+
+          &:hover .action,
+          &.hover .action {
+            -webkit-transition-delay: 0.35s;
+            transition-delay: 0.35s;
+          }
+          &:hover .project-actions,
+          &.hover .project-actions {
+            -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+          }
+
+          &:hover h4,
+          &.hover h4 {
+            -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .projects {
+    .content {
+      .content-body {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects {
+    .content {
+      .content-body {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .projects {
+    .content {
+      .content-body {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

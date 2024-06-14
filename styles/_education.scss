@@ -1,0 +1,62 @@
+.education {
+  .content-title {
+    font-weight: 600;
+    color: $primary-color;
+    padding-bottom: 20px;
+  }
+
+  .content-body {
+    .content-box {
+      position: relative;
+      transition: all 0.3s;
+      margin-bottom: 2em;
+      border-left: 2px solid $accent-color;
+      padding-left: 4rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $primary-color;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        top: 0;
+        left: -8px;
+      }
+
+      .box-year {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 10px;
+        background-color: $grey-text-color;
+        color: $grey-color;
+        font-weight: 600;
+      }
+
+      .box-title {
+        font-weight: 700;
+        color: $accent-color;
+
+        span {
+          color: $accent-color;
+        }
+      }
+
+      .box-text {
+        opacity: 0.4;
+        font-size: $font-small;
+      }
+
+      i {
+        position: absolute;
+        top: 0;
+        left: -25px;
+        font-size: $font-medium;
+        border-radius: 50px;
+        padding: 0.8em;
+        background-color: $primary-color;
+        color: $accent-color;
+      }
+    }
+  }
+}

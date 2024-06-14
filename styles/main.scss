@@ -1,0 +1,127 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  font-family: $poppins-font;
+}
+
+html {
+  overflow-x: hidden;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: $background-color;
+}
+
+.container-style {
+  background-color: $background-color;
+  width: 100%;
+  height: auto;
+  padding: 5rem 11rem;
+  color: $accent-color;
+}
+
+.container-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+
+  .container-title-back {
+    font-size: 95px;
+    font-weight: 700;
+    color: $accent-color;
+    z-index: 2;
+    opacity: 0.2;
+    text-transform: uppercase;
+  }
+
+  .container-title-front {
+    position: absolute;
+    z-index: 3;
+    font-weight: 700;
+    bottom: 8px;
+    font-size: 70px;
+    color: $accent-color;
+    text-transform: uppercase;
+
+    span {
+      color: $primary-color;
+    }
+  }
+}
+
+// navbar
+@import "navbar";
+
+// hero
+@import "hero";
+
+//about me
+@import "about";
+
+//education
+@import "education";
+
+//skills
+@import "skills";
+
+//projects
+@import "projects";
+
+//contacts
+@import "contact";
+
+//footer
+@import "footer";
+
+@media screen and (max-width: 992px) {
+  .container-style {
+    padding: 4rem 0;
+  }
+
+  .container-title {
+    .container-title-back {
+      font-size: 85px;
+    }
+
+    .container-title-front {
+      font-size: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-style {
+    padding: 3rem 0;
+  }
+
+  .container-title {
+    .container-title-back {
+      font-size: 75px;
+    }
+
+    .container-title-front {
+      font-size: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container-style {
+    padding: 2rem 1em;
+  }
+
+  .container-title {
+    .container-title-back {
+      font-size: 65px;
+    }
+
+    .container-title-front {
+      font-size: 45px;
+    }
+  }
+}

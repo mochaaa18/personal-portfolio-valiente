@@ -1,0 +1,177 @@
+.skills {
+  .progress-container {
+    color: $accent-color;
+
+    .progress-bar {
+      background-color: $primary-color;
+
+      &.progress-html {
+        width: 78%;
+      }
+      &.progress-css {
+        width: 75%;
+      }
+      &.progress-sass {
+        width: 68%;
+      }
+      &.progress-bootstrap {
+        width: 77%;
+      }
+      &.progress-javascript {
+        width: 55%;
+      }
+      &.progress-react {
+        width: 68%;
+      }
+      &.progress-tailwind {
+        width: 56%;
+      }
+      &.progress-node {
+        width: 50%;
+      }
+      &.progress-express {
+        width: 50%;
+      }
+      &.progress-mongo {
+        width: 45%;
+      }
+      &.progress-postgre {
+        width: 55%;
+      }
+    }
+
+    span {
+      display: inline;
+      padding: 3px 8px;
+      border-radius: 10px;
+      background-color: $grey-text-color;
+      color: $grey-color;
+      font-size: $font-small;
+    }
+  }
+
+  .icon-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+    .icon-items {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .icon {
+      font-size: 5.5em;
+      color: $accent-color;
+      opacity: 0.2;
+      transition: transform 0.5s;
+
+      &.icon-html:hover {
+        color: $icon-html-color;
+        transform: scale(1.5);
+        opacity: 1;
+      }
+      &.icon-css:hover {
+        color: $icon-css-color;
+        transform: scale(1.5);
+        opacity: 1;
+      }
+      &.icon-sass:hover {
+        color: $icon-sass-color;
+        transform: scale(1.5);
+        opacity: 1;
+      }
+      &.icon-boot:hover {
+        color: $icon-bootstrap-color;
+        transform: scale(1.5);
+        opacity: 1;
+      }
+      &.icon-js:hover {
+        color: $icon-js-color;
+        transform: scale(1.5);
+        opacity: 1;
+      }
+      &.icon-react:hover {
+        color: $icon-react-color;
+        transform: scale(1.5);
+        opacity: 1;
+      }
+      &.icon-tailwind:hover {
+        color: $icon-tailwind-color;
+        transform: scale(1.5);
+        opacity: 1;
+      }
+      &.icon-node:hover {
+        color: $icon-node-color;
+        transform: scale(1.5);
+        opacity: 1;
+      }
+      &.icon-mongo:hover {
+        color: $icon-mongo-color;
+        transform: scale(1.5);
+        opacity: 1;
+      }
+      &.icon-postgre:hover {
+        color: $icon-postgre-color;
+        transform: scale(1.5);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .skills {
+    .icon-container {
+      .icon-items {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .skills {
+    .cont {
+      width: 100%;
+      padding: 0 2em;
+    }
+
+    .icon-container {
+      .icon-items {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    .cont {
+      width: 100%;
+      padding: 0 2em;
+    }
+
+    .icon-container {
+      .icon-items {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .skills {
+    .cont {
+      width: 100%;
+      padding: 0 2em;
+    }
+
+    .icon-container {
+      .icon-items {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+  }
+}
